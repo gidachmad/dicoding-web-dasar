@@ -88,19 +88,30 @@ aside img {
   width: 60%;
 }
 
-aside p, table {
+.dropdown {
   align-self: flex-start;
+  font-size: 1.2rem;
+  position: relative;
 }
 
-table{
-  width: 100%;
-  border-collapse: collapse;
+.dropdown h2{
+  font-weight: normal;
+  color: white;
+  font-size: 1.2rem;
+  padding: .7rem;
+  background-color: hsl(255, 30%, 50%);
+  cursor: pointer;
+  border-radius: .5rem;
 }
 
-td {
-  padding: .5rem;
-  text-align: left;
+.dropdown h2:hover{
+  background-color: hsl(255, 30%, 70%);
 }
+
+.dropdown p {
+  display: none;
+}
+
 
 #kp-naga, #ladu {
   display: flex;
@@ -128,6 +139,8 @@ td {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   margin-bottom: 3rem;
 }
+
+
 
 
 footer{

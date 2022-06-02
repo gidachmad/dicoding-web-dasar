@@ -55,30 +55,31 @@
     <aside id="profile" class="card">
       <img src="../img/image20.png" alt="">
       <h1>Gid Achmad Ahlul Fadli</h1>
-      <p>Profil : </p>
-      <table>
-        <tr>
-          <td>Sekolah </td>
-          <td>: </td>
-          <td>Universitas Telkom</td>
-        </tr>
-        <tr>
-          <td>Jurusan </td>
-          <td>: </td>
-          <td>D3 RPLA</td>
-        </tr>
-        <tr>
-          <td>Domisili </td>
-          <td>: </td>
-          <td>Bandung</td>
-        </tr>
-      </table>
-
+      <div class="dropdown">
+        <h2 onclick="dropdown()" id="click-drop">Profil</h2>
+        <p id="myDropdown" class="card">
+          Saya adalah seorang mahasiswa di D3 Rekayasa Perangkat Lunak Aplikasi, Universitas Telkom.
+          Merantau dari Salawu, Tasikmalaya. Sekarang berdomisili Bandung.
+        </p>
+      </div>
     </aside>
   </main>
 
   <footer>
     &copy; Re:Gid AAF, Pemrograman Web Dasar Dicoding 2022
   </footer>
+
+
+  <script>
+    function dropdown (){
+      const dropBtn = document.getElementById("myDropdown");
+
+      if (dropBtn.style.display === "none") {
+        dropBtn.style.display = "block";
+      }else {
+        dropBtn.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>
