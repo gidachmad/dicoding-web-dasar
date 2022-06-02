@@ -2,6 +2,7 @@
   padding: 0; margin: 0;
   font-size: 16px;
   text-align: justify;
+  line-height: 1.5;
 }
 
 html {
@@ -39,19 +40,21 @@ nav {
   width: 50%;
   margin: 0 auto;
   justify-content: space-between;
+  align-items: center;
   position: relative;
   top: 0;
 }
 
-nav > a{
+nav > a {
   padding: .5rem;
+  margin: .5rem;
   text-align: center;
   flex-basis: 40%;
   background-color: hsl(255, 30%, 50%);
   border-radius: 5px;
 }
 
-nav > a:hover{
+nav > a:hover {
   background-color: hsl(255, 30%, 30%);
 }
 
@@ -113,14 +116,18 @@ aside img {
 }
 
 
-#kp-naga, #ladu {
+article {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
 }
 
 .div-image{
-  align-self: center;
   flex-basis: 45%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .div-desc{
@@ -140,13 +147,40 @@ aside img {
   margin-bottom: 3rem;
 }
 
-
-
-
 footer{
   padding: 2rem;
   color: #fff;
   font-size: 1.4rem;
   text-align: center;
   background-color: hsl(255, 30%, 50%);
+}
+
+
+
+/* media queryss */
+
+@media only screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  * {
+    font-size: 14px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  article {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  * {
+    font-size: 12px;
+  }
 }
